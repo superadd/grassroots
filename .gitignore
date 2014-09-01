@@ -1,8 +1,9 @@
+/target
+/classes
+/checkouts
 pom.xml
-*jar
-/lib/
-/classes/
-/targets/
-.lein-deps-sum
-
-/.DS_Store
+pom.xml.asc
+*.jar
+*.class
+/.lein-*
+/.nrepl-port
