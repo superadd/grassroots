@@ -74,15 +74,16 @@ textarea {
 
 body {
 
+  background: #66aa66 url("../img/background.jpg") center center;
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #ffffff;
 
 }
 
 h1 {
 
-  font-size: 2em;
+  font-size: 1.2em;
 }
 
 h2 {
@@ -93,10 +94,9 @@ h2 {
 
 .page-wrapper {
 
-  background: #66aa66 url("../img/background.jpg") center center;
   min-height: 480px;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 
 }
 
@@ -110,7 +110,7 @@ header {
 
 .logo {
 
-  width: 25%;
+  width: 33%;
 }
 
 section {
@@ -126,11 +126,12 @@ section h2 {
 
 .team-name {
 
-  font-size: 2em;
+  font-size: 1.4em;
   background: #ff0000;
   padding: 10px;
   color: #ffffff;
   width: 66%;
+  min-height: 50px;
 }
 
 .team-name p {
@@ -173,7 +174,7 @@ section h2 {
   -ms-appearance: none;
   appearance: none;
   border: none;
-  height: 64px;
+  height: 50px;
   text-indent: -9999px;
 
 }
@@ -181,6 +182,8 @@ section h2 {
 .view-settings {
 
   background: white url("../img/icons/svg/settings2.svg") center center no-repeat;
+  background-size: 30px;
+
 }
 
 .view-settings #Layer_1 {
@@ -192,6 +195,7 @@ section h2 {
 
   margin-left: 3%;
   background: white url("../img/icons/svg/calendar4.svg") center center no-repeat;
+  background-size: 30px;
 }
 
 .score-block {
@@ -210,12 +214,13 @@ section h2 {
 
 .data-panel {
 
-  font-size: 2em;
+  font-size: 1.4em;
   text-align: center;
   width: 46.5%;
   display: inline-block;
   padding: 10px;
   font-weight: bold;
+  height: 50px;
 }
 
 .data-score {
@@ -375,8 +380,36 @@ textarea[contenteditable] {
 
   .page-wrapper {
 
-    max-width: 605px;
+    max-width: 645px;
+    min-height: 100vh;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
     margin: 0 auto;
+  }
+
+  .logo {
+
+    max-width: 25%;
+  }
+
+  .team-name {
+
+    font-size: 2em;
+
+  }
+
+  .data-panel {
+
+    min-height: 59px;
+    height: auto;
+    font-size: 2em;
+
+  }
+
+  .settings-block button {
+
+    min-height: 59px;
+    height: auto;
   }
 }
 
