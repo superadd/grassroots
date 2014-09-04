@@ -84,12 +84,48 @@
                     </div>
                 </section>
                 <section id="next-match-map" class="next-match-map clearfix pull-left">
-                    <div id="gmap"></div>
+                    <div id="map-canvas"></div>
                 </section>
             </main>
         </div>
 
-        <script src="js/vendor/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzTkrUjzC8TTECcxrgdgzU1P7lMBI937Y">
+    </script>
+    <script type="text/javascript">
+        var directionsDisplay;
+        var directionsService = new google.maps.DirectionsService();
+        var map;
+        var myLatlng = new google.maps.LatLng(52.419,-2.219);
+
+      function initialize() {
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 14
+        };
+        map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        directionsDisplay = new google.maps.DirectionsRenderer();
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            title:"Next match"
+        });
+        // marker.setMap(map);
+          directionsDisplay.setMap(map);
+          var request = {
+            origin: '52.3591317,-2.2705797',
+            destination: '52.419,-2.219',
+            travelMode: google.maps.TravelMode.DRIVING
+          };
+          directionsService.route(request, function(result, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+              directionsDisplay.setDirections(result);
+            }
+          });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
         <script src="js/helper.js"></script>
         <script src="js/compiled/out/goog/base.js" type="text/javascript"></script>
         <script src="js/compiled/app.js" type="text/javascript"></script>
