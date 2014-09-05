@@ -9,11 +9,14 @@
                  [compojure "1.1.8"]
                  [liberator "0.11.0"]
                  [enlive "1.1.5"]
-                 [org.clojure/clojurescript "0.0-2173"]
+                 ;;; Frontend
+                 [org.clojure/clojurescript "0.0-2277"]
+                 [kioo "0.4.0"]
+                 [om "0.7.1"]
                  [figwheel "0.1.2-2173-SNAPSHOT"]]
 
   :plugins [[lein-ring "0.8.10"]
-            [lein-cljsbuild "1.0.2"]
+            [lein-cljsbuild "1.0.3"]
             [lein-figwheel "0.1.2-2173-SNAPSHOT"]]
 
   :source-paths ["src/app"]
@@ -27,8 +30,15 @@
                   :source-paths ["src/ui"]
                   :compiler { :output-to "resources/public/js/compiled/app.js"
                               :output-dir "resources/public/js/compiled/out"
-                              ;;:externs ["resources/public/js/externs/jquery-1.9.js"]
                               :optimizations :none
-                              :source-map true }}]}
+                              :source-map true }}
+                 {:id "release"
+                    :source-paths ["src/ui"]
+                    :compiler { :output-to "resources/public/js/compiled/app.js"
+                                :optimizations :advanced
+                                :pretty-print false
+                                :preamble ["react/react.min.js"]
+                                :externs ["react/externs/react.js"]}}]}
+
 
   :main grassrootsapp.core)
