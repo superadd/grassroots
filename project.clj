@@ -12,12 +12,10 @@
                  ;;; Frontend
                  [org.clojure/clojurescript "0.0-2277"]
                  [kioo "0.4.0"]
-                 [om "0.7.1"]
-                 [figwheel "0.1.2-2173-SNAPSHOT"]]
+                 [om "0.7.1"]]
 
   :plugins [[lein-ring "0.8.10"]
-            [lein-cljsbuild "1.0.3"]
-            [lein-figwheel "0.1.2-2173-SNAPSHOT"]]
+            [lein-cljsbuild "1.0.3"]]
 
   :source-paths ["src/app"]
 
@@ -28,13 +26,13 @@
 
         :builds [{:id "dev"
                   :source-paths ["src/ui"]
-                  :compiler { :output-to "resources/public/js/compiled/app.js"
+                  :compiler { :output-to "resources/public/js/compiled/out/app.js"
                               :output-dir "resources/public/js/compiled/out"
                               :optimizations :none
                               :source-map true }}
                  {:id "release"
                     :source-paths ["src/ui"]
-                    :compiler { :output-to "resources/public/js/compiled/app.js"
+                    :compiler { :output-to "resources/public/js/compiled/out/app.js"
                                 :optimizations :advanced
                                 :pretty-print false
                                 :preamble ["react/react.min.js"]

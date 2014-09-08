@@ -8,7 +8,7 @@
             [ring.util.response :refer [response]]
             [net.cgrand.enlive-html :as html]))
 
-(html/deftemplate index "index.html" [body]
+(html/deftemplate index "public/index.html" [body]
                   [:#wrapper]
                   (html/content body))
 
