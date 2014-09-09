@@ -1,7 +1,10 @@
 {"version":3,
  "file":
- "/c:/sites/grassroots/resources/public/js/compiled/out/grassrootsapp/ui.js",
+ "/Users/leeowen/Development/superadd/grassroots/resources/public/js/compiled/out/grassrootsapp/ui.js",
  "sources":["ui.cljs"],
- "lineCount":9,
- "mappings":";AAAA;;;;AAGA,AAACA;AAED,4BAAA,5BAACC",
- "names":["cljs.core/enable-console-print!", "cljs.core/println"]}
+ "lineCount":15,
+ "mappings":
+ ";AAAA;;;;;;;;AAKA,AAACA;AAED,4BAAA,5BAACC;AAED,2CAAA,3CAACC,uHAEkB,aAAA,AAAO,iCAAA,1BAACC",
+ "names":
+ ["cljs.core/enable-console-print!", "cljs.core/println",
+  "figwheel.client/watch-and-reload", "cljs.core/print"]}

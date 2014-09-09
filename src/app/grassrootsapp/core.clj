@@ -9,12 +9,13 @@
             [net.cgrand.enlive-html :as html]))
 
 (html/deftemplate index "public/index.html" [body]
-                  [:#wrapper]
-                  (html/content body))
+                  [:#map-canvas]
+                 (html/content body))
 
 (defroutes routes
   (GET "/" request (reduce str (index "test")))
   (ANY "/test" [] handle-dump)
+  (route/resources "/")
   (route/not-found "<h1>Page not found</h1>"))
 
 (def app
