@@ -48,46 +48,71 @@
     </head>
     <body>
 
-        <div id="wrapper" class="wrapper page-wrapper">
-            <header id="header">
-                <img alt="Grassroots App Logo" src="img/grassroots-logo-white-2x.png" id="logo" class="logo grassroots-logo">
-            </header>
-            <main id="main">
-                <section id="my-team" class="my-team clearfix">
-                    <h2>My Team</h2>
-                    <div class="team-name my-team-name pull-left" id="my-team-name">
-                        <p>Areley Kings Colts</p>
-                    </div>
-                    <div class="data-block settings-block pull-left" id="settings-block">
-                        <button class="view-settings">View settings</button>
-                        <button class="view-schedule">View schedule</button>
+        <div id="pages-wrapper">
+            <div id="wrapper" class="wrapper page-wrapper">
+                <header id="header">
+                    <img alt="Grassroots App Logo" src="img/grassroots-logo-white-2x.png" id="logo" class="logo grassroots-logo">
+                </header>
+                <main id="main">
+                    <section id="my-team" class="my-team clearfix">
+                        <h2>My Team</h2>
+                        <div class="team-name my-team-name pull-left" id="my-team-name">
+                            <p>Areley Kings Colts</p>
+                        </div>
+                        <div class="data-block settings-block pull-left" id="settings-block">
+                            <button class="view-settings" id="view-settings">View settings</button>
+                            <button class="view-schedule" id="view-schedule">View schedule</button>
+                        </div>
+                    </section>
+                    <section id="last-result" class="last-result clearfix">
+                        <h2>Last result</h2>
+                        <div class="data-block score-block pull-left" id="score-block">
+                            <span class="data-panel data-score data-score-my-team" id="data-my-team-score">2</span>
+                            <span class="data-panel data-score data-score-opponent-team" id="data-opponent-score">0</span>
+                        </div>
+                        <div class="team-name opponent-team-name pull-left" id="last-result-opponent-team-name">
+                            <p>Kidderminster Youth</p>
+                        </div>
+                    </section>
+                    <section id="next-match" class="next-match clearfix">
+                        <h2>Next match</h2>
+                        <div class="team-name opponent-team-name pull-left" id="next-match-opponent-team-name">
+                            <p>Cookley Colts</p>
+                        </div>
+                        <div class="data-block schedule-block pull-left" id="schedule-block">
+                            <span class="data-panel data-date data-date-day" id="data-date-day">26</span>
+                            <span class="data-panel data-date data-date-month" id="data-date-month">Mar</span>
+                        </div>
+                    </section>
+                    <section id="next-match-map" class="next-match-map clearfix pull-left">
+                        <div id="map-canvas"></div>
+                    </section>
+                </main>
+            </div>
+
+            <div id="wrapper-pg2" class="wrapper page-wrapper page-wrapper-pg2 loader-wrapper">
+
+                <section id="loader" class="loader clearfix">
+
+                    <h2>Secondary screen</h2>
+                    <div>
+
+                        <form>
+
+                            <label for="field">Example field</label>
+                            <input type="text" name="field" id="field" placeholder="Example field" />
+
+                            <button id="submit">Save</button>
+
+                        </form>
                     </div>
                 </section>
-                <section id="last-result" class="last-result clearfix">
-                    <h2>Last result</h2>
-                    <div class="data-block score-block pull-left" id="score-block">
-                        <span class="data-panel data-score data-score-my-team" id="data-my-team-score">2</span>
-                        <span class="data-panel data-score data-score-opponent-team" id="data-opponent-score">0</span>
-                    </div>
-                    <div class="team-name opponent-team-name pull-left" id="last-result-opponent-team-name">
-                        <p>Kidderminster Youth</p>
-                    </div>
-                </section>
-                <section id="next-match" class="next-match clearfix">
-                    <h2>Next match</h2>
-                    <div class="team-name opponent-team-name pull-left" id="next-match-opponent-team-name">
-                        <p>Cookley Colts</p>
-                    </div>
-                    <div class="data-block schedule-block pull-left" id="schedule-block">
-                        <span class="data-panel data-date data-date-day" id="data-date-day">26</span>
-                        <span class="data-panel data-date data-date-month" id="data-date-month">Mar</span>
-                    </div>
-                </section>
-                <section id="next-match-map" class="next-match-map clearfix pull-left">
-                    <div id="map-canvas"></div>
-                </section>
-            </main>
-        </div>
+
+                </div>
+
+            </div>
+    </div>
+
 
         <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzTkrUjzC8TTECcxrgdgzU1P7lMBI937Y">
